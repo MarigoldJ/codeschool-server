@@ -17,7 +17,7 @@ app.use(cors());
 app.use(routes);
 
 app
-  .listen(PORT, () => console.log(`Server on http://localhost:${PORT}`))
+  .listen(PORT, () => console.log(`Server on the port : ${PORT}`))
   .on("error", (err: any) => {
     console.error(err);
     process.exit(1);
