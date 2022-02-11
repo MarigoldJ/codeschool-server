@@ -4,6 +4,7 @@ import { CampController } from "../controllers";
 const router = Router();
 
 router.use("/create", CampController.openCamp);
-router.use("/hotcamps", CampController.getHotCamp);
+router.use("/hotcamps", CampController.getHotCamps);
+router.use("/saledcamps", CampController.getSaledCamps);
 
 export default router;

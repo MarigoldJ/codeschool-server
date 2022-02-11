@@ -5,15 +5,15 @@ const createCamp = (data: ICamp) => {
   const camp = new Camp(data);
   return camp.save();
 };
-const getHotCamp = () => {
+const getHotCamps = () => {
   return Camp.find({ isHot: true }).limit(4);
 };
-const getSaledCamp = () => {
+const getSaledCamps = () => {
   return Camp.find({ isSpecialDiscount: true }).limit(4);
 };
 
 export default {
   createCamp,
-  getHotCamp,
-  getSaledCamp,
+  getHotCamps,
+  getSaledCamps,
 };

@@ -22,22 +22,22 @@ const findAll = async (req: Request, res: Response, next: NextFunction) => {
     next(error);
   }
 };
-const getHotCamp = async (req: Request, res: Response, next: NextFunction) => {
+const getHotCamps = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const hotCamps = await CampService.getHotCamp();
+    const hotCamps = await CampService.getHotCamps();
     res.json(hotCamps);
   } catch (error) {
     res.json({ isOk: false });
     next(error);
   }
 };
-const getSaledCamp = async (
+const getSaledCamps = async (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
   try {
-    const saledCamps = await CampService.getSaledCamp();
+    const saledCamps = await CampService.getSaledCamps();
     res.json(saledCamps);
   } catch (error) {
     res.json({ isOk: false });
@@ -48,6 +48,6 @@ const getSaledCamp = async (
 export default {
   openCamp,
   findAll,
-  getHotCamp,
-  getSaledCamp,
+  getHotCamps,
+  getSaledCamps,
 };
