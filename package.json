@@ -6,7 +6,7 @@
     "test": "nodemon",
     "dev": "ts-node src",
     "build": "tsc --build",
-    "start": "ts-node dist"
+    "start": "ts-node dist/index.ts"
   },
   "keywords": [],
   "author": "",
