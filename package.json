@@ -5,7 +5,8 @@
   "scripts": {
     "test": "nodemon",
     "dev": "ts-node src",
-    "build": "tsc && node dist"
+    "build": "tsc --build",
+    "start": "ts-node dist"
   },
   "keywords": [],
   "author": "",
