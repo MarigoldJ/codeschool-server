@@ -11,9 +11,13 @@ const getHotCamps = () => {
 const getSaledCamps = () => {
   return Camp.find({ isSpecialDiscount: true }).limit(4);
 };
+const getCampById = (id) => {
+  return Camp.findById(id).limit(1);
+};
 
 export default {
   createCamp,
   getHotCamps,
   getSaledCamps,
+  getCampById,
 };

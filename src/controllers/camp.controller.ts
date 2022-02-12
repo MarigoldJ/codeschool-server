@@ -44,10 +44,21 @@ const getSaledCamps = async (
     next(error);
   }
 };
+const getById = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    // camp 한개만 반환
+    const camp = await CampService.getCampById(req.body.id);
+    res.json(camp);
+  } catch (error) {
+    res.json({ isOk: false });
+    next(error);
+  }
+};
 
 export default {
   openCamp,
   findAll,
   getHotCamps,
   getSaledCamps,
+  getById,
 };
